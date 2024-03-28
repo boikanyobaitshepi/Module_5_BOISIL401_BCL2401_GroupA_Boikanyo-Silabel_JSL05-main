@@ -18,7 +18,6 @@ const songs = [
     { title: "What's Going On", artist: "Marvin Gaye", genre: "R&B" },
     { title: "My Girl", artist: "The Temptations", genre: "R&B" },
     { title: "I Will Survive", artist: "Gloria Gaynor", genre: "Pop" }
-    // Feel free to add even more songs
 ];
 
 // Object containing each Guardian's preferred genre
@@ -28,7 +27,6 @@ const guardians = {
     "Drax": "R&B",
     "Rocket": "Rock",
     "Groot": "Pop",
-    // Add preferences for Drax, Rocket, and Groot
 };
 
 function generatePlaylist(guardians, songs) {
