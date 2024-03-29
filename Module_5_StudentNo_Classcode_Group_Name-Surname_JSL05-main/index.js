@@ -30,7 +30,7 @@ const guardians = {
 };
 
 function generatePlaylist(guardians, songs) {
-    // Use the map() function to create playlists for each Guardian
+    //  the map() function to create playlists for each Guardian
     const playlists = Object.entries(guardians).map(([name, genre]) => {
       // Filter the songs array based on the specified genre
       const songsOfPreferredGenre = songs.filter(song => song.genre === genre);
@@ -40,7 +40,7 @@ function generatePlaylist(guardians, songs) {
         .sort(() => 0.5 - Math.random())
         .slice(0, 3);
   
-      // Add the guardian's name as the first element of the playlist
+      // guardian's name as the first element of the playlist
       playlist.unshift({ name });
   
       return playlist;
@@ -52,7 +52,7 @@ function generatePlaylist(guardians, songs) {
   
   // Helper function to display the playlists
 function displayPlaylists(playlists) {
-  // Create a container div for playlists
+  // container div for playlists
   const playlistsDiv = document.createElement('div');
   playlistsDiv.id = 'playlists';
 
@@ -62,12 +62,12 @@ function displayPlaylists(playlists) {
     const playlistDiv = document.createElement('div');
     playlistDiv.classList.add('playlist');
 
-    // Create a title h2
+    // title h2
     const title = document.createElement('h2');
     title.textContent = playlist[0].name + "'s Playlist";
     playlistDiv.appendChild(title)
     
-    // Create an unordered list
+    //unordered list
     const list = document.createElement('ul');
 
     // Loop through each song in the playlist
@@ -75,7 +75,7 @@ function displayPlaylists(playlists) {
       // Create a list items
       const listItem = document.createElement('ul');
 
-      // Set the song title and artist
+      // song title and artist
       const songTitle = document.createElement('span');
       songTitle.textContent = `${song.title} `;
       songTitle.className = 'song-title';
